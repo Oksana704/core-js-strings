@@ -150,9 +150,7 @@ function repeatString(str, times) {
  *   removeFirstOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
 function removeFirstOccurrences(str, value) {
-  const newStr = str;
-  const typeValue = value;
-  return newStr.replace(typeValue, '');
+  return str.replace(value, '');
 }
 
 /**
@@ -344,8 +342,8 @@ function reverseWords(str) {
   const splitStr = str.split(' ');
   const reverseStr = splitStr.reverse();
   const joinStr = reverseStr.join(' ');
-  const reversNew = joinStr.split('').reverse().join('');
-  return reversNew;
+  const reversNewStr = joinStr.split('').reverse().join('');
+  return reversNewStr;
 }
 
 /**
@@ -359,8 +357,8 @@ function reverseWords(str) {
  *   invertCase('JavaScript is Fun') => 'jAVAsCRIPT IS fUN'
  *   invertCase('12345') => '12345'
  */
-function invertCase(str) {
-  return str.toUpperCase();
+function invertCase(/* str */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -394,8 +392,8 @@ function extractNameFromTemplate(value) {
   const splitStr = value.split(' ');
   const firstName = splitStr[1];
   const lastName = splitStr[2];
-  const newLastName = lastName.slice(0, -1);
-  return `${firstName} ${newLastName}`;
+  const sliceLastName = lastName.slice(0, -1);
+  return `${firstName} ${sliceLastName}`;
 }
 
 /**
